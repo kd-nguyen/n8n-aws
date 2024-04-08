@@ -30,7 +30,7 @@ resource "aws_ecs_service" "n8n" {
   name            = var.app_name
   cluster         = aws_ecs_cluster.n8n.id
   task_definition = aws_ecs_task_definition.n8n.arn
-  desired_count   = 1
+  desired_count   = 2
   launch_type     = "FARGATE"
 
   load_balancer {
